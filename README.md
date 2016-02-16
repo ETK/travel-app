@@ -1,4 +1,4 @@
-# Travel App
+# Travel App [![Build Status](https://travis-ci.org/kmathur7/travel-app.svg?branch=master)](https://travis-ci.org/kmathur7/travel-app)
 An App which will allow users to get the best deals online on flights
 
 
