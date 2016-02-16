@@ -1,0 +1,22 @@
+{
+  "name": "travel-app",
+  "description": "Travel App Which will allow users to get the best deals online on flights",
+  "main": "index.js",
+  "authors": [
+    "Kunal Mathur"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kmathur7/travel-app",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0"
+  }
+}

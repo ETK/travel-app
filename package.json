@@ -1,0 +1,19 @@
+{
+  "name": "travel-app",
+  "version": "0.0.1",
+  "description": "Travel App Which will allow users to get the best deals online on flights",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmathur7/travel-app.git"
+  },
+  "author": "Kunal Mathur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmathur7/travel-app/issues"
+  },
+  "homepage": "https://github.com/kmathur7/travel-app#readme"
+}
