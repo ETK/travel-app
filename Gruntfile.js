@@ -21,6 +21,9 @@ module.exports = function(grunt) {
       src: ['styles/**/*.css']
     }
   },
+  concurrent: {
+        check: ['eslint','csslint']
+  },
   karma: {
     unit: {
       configFile: 'karma.conf.js'
@@ -33,5 +36,7 @@ module.exports = function(grunt) {
 
   // Default task(s).
   grunt.registerTask('default', ['eslint']);
+  grunt.registerTask('lint', ['check']);
+  grunt.registerTask('test', ['karma']);
 
 };
