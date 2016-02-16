@@ -1,0 +1,1 @@
+angular.module('travelApp',['ui.router']);
