@@ -3,6 +3,20 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+  connect: {
+    server: {
+      options: {
+        port: 9001,
+        base: '.',
+        keepalive: true,
+        open: {
+                target: 'http://localhost:9001', // target url to open
+                appName: 'chrome' // name of the app that opens, ie: open, start, xdg-open
+                
+              }
+      }
+    }
+  },  
   eslint: {
     target: ['scripts/**/*.js']
   },  

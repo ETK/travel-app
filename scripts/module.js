@@ -1,1 +1,13 @@
-angular.module('travelApp',['ui.router']);
+angular.module('travelApp',['ui.router'])
+
+	.config(function($stateProvider,$urlRouterProvider){
+		// For any unmatched url, redirect to /state1
+  		$urlRouterProvider.otherwise("/");
+
+  		$stateProvider
+  			.state('home',{
+      			url: "/",
+      			templateUrl: "./views/home.html"
+    		})
+
+	})
