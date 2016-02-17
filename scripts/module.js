@@ -9,5 +9,9 @@ angular.module('travelApp',['ui.router'])
       			url: "/",
       			templateUrl: "./views/home.html"
     		})
+    		.state('results',{
+      			url: "/",
+      			templateUrl: "./views/results.html"
+    		})
 
 	})
