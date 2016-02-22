@@ -1,0 +1,56 @@
+/* Extra small devices (portrait phones, less than 34em)
+   No media query since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 34em and up) */
+@media (min-width: 34em) {
+	.imageheight {
+		height: 20em;
+		/* background-image: url(../assets/banner.jpg); */
+	}
+}
+
+/* Medium devices (tablets, 48em and up) */
+@media (min-width: 48em) {
+	.imageheight {
+		height: 20em;
+		/* background-image: url(../assets/banner.jpg); */
+	}
+}
+
+/* Large devices (desktops, 62em and up) */
+@media (min-width: 62em) {
+	.imageheight {
+		height: 20em;
+		/* background-image: url(../assets/banner.jpg); */
+	}
+	.headingtop {
+		padding-top: 2em;
+	}
+	.formpadding {
+		padding-bottom: 4em;
+	}
+}
+
+/* Extra large devices (large desktops, 75em and up) */
+@media (min-width: 75em) {
+	.imageheight {
+		height: 20em;
+		/* background-image: url(../assets/banner.jpg); */
+	}
+}
+
+.fontcolor{
+	color: white;
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+
+}
