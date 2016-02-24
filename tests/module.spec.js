@@ -18,7 +18,6 @@ describe('Router Testing: ',function(){
 		$state.go('home');
 		$rootScope.$digest();
 		expect($state.current.name).toBe('home');
-		expect($state.current.templateUrl).toEqual('./views/home.html');
 	}));
 
 	it('should transition to results state', inject(function($rootScope, $state){
@@ -26,7 +25,6 @@ describe('Router Testing: ',function(){
 		$state.transitionTo('results');
 		$rootScope.$digest();
 		expect($state.current.name).toBe('results');
-		expect($state.current.templateUrl).toEqual('./views/results.html');
 	}));
 
 	
