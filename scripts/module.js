@@ -3,7 +3,15 @@
 
     angular
       .module('travelApp',['ui.router'])
-      .config(function($stateProvider,$urlRouterProvider){
+      .config(config)
+      .constant('getflight','/getFlight')
+      .constant('addflight','/addFlights')
+      .constant('getcities','/getCities')
+      .constant('addcities','/addCities');
+
+      config.$inject = ['$stateProvider', '$urlRouterProvider'];
+      
+      function config($stateProvider,$urlRouterProvider){
 		    // For any unmatched url, redirect to /state1
   		  $urlRouterProvider.otherwise('/');
         $stateProvider
@@ -17,5 +25,5 @@
       			 url: '/',
       			 templateUrl: './views/results.html'
     		  })
-      });
+      };
 })();

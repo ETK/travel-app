@@ -4,7 +4,9 @@
     angular.module('travelApp')
     	.controller('HomeController', HomeController);
 
-    function HomeController(){
+        HomeController.$inject = ['getDataService']
+
+    function HomeController(getDataService){
     	var vm = this;
     	vm.searchFlights = searchFlights;
 
