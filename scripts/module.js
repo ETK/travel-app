@@ -4,10 +4,10 @@
     angular
       .module('travelApp',['ui.router'])
       .config(config)
-      .constant('getflight','/getFlight')
-      .constant('addflight','/addFlights')
-      .constant('getcities','/getCities')
-      .constant('addcities','/addCities');
+      .constant('getflighturl','/getFlight')
+      .constant('addflighturl','/addFlights')
+      .constant('getcitiesurl','/getCities')
+      .constant('addcitiesurl','/addCities');
 
       config.$inject = ['$stateProvider', '$urlRouterProvider'];
       

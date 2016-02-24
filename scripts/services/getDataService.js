@@ -7,24 +7,46 @@
     	function getDataService($http){
 
     		var service = {
-    			getFlight: getFlight
+    			getFlight: getFlight,
+                getCities: getCities
     		};
 
     		return service;
 
-    		function getFlight (url,data){
-    			return $http.get(url)
-    					.then(getFlightDataComplete)
-    					.catch(getFlightDataFailed);
+    		function getFlight (url,parameters){
+    			return $http({
+                    url:url,
+                    method: 'GET',
+                    params: parameters
+                })
+    			.then(getFlightDataComplete)
+    			.catch(getFlightDataFailed);
     					
     			function getFlightDataComplete(response){
     				return response.data;
     			}
 
     			function getFlightDataFailed(error){
-    				console.log('XHR Failed for getFlight.' + error.data);
+    				console.log('XHR Failed for getFlight: ' + error.data);
     			}	
     		};
+
+            function getCities (url){
+                return $http({
+                    url:url,
+                    method: 'GET'
+                })
+                .then(getCityDataComplete)
+                .catch(getCityDataFailed);
+
+                function getCityDataComplete(response){
+                    return response;
+                }
+
+                function getCityDataFailed(error){
+                    console.log('XHR Failed for getCities: ' + error.data);
+                }
+            };
     	}
 
 
