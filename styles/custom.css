@@ -54,3 +54,56 @@ video {
     transform: translateX(-50%) translateY(-50%);
 
 }
+
+.background {
+	background-color: #7891c6;
+
+}
+.listbackground{
+	background-color: #ffffff;
+	color: black;
+	margin-bottom: 1em;
+}
+.logo {
+	background-image: url(../assets/logoSprite-2X.png);
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	margin-top: 6px;
+}
+
+
+
+.IndiGo {
+	background-position: 0px 0;
+}
+.Vistara {
+	background-position: -60px 0;
+}
+.SpiceJet {
+	background-position: -120px 0;
+}
+.Go {
+	background-position: -180px 0;
+}
+.Air {
+	background-position: -240px 0;
+}
+.Jet {
+	background-position: -300px 0;
+}
+.AirAsia {
+	background-position: -360px 0;
+}
+
+.AirCosta {
+	background-position: -420px 0;
+}
+
+
+
+
+
+
+
+

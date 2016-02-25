@@ -3,10 +3,21 @@
   <a class="navbar-brand" href="#">TravelEasy</a>
 </nav>
 <div class="imageheight fontcolor">
-  <video src="./assets/video.mp4" autoplay loop muted>
-  </video>
+  
   <div class="container" style="background:transparent url(./assets/transparency.png) repeat 0 0">
     <p class="lead headingtop">Helping you find the cheapest flight to your favourite destinations.</p>
+    <div class="listbackground form-inline" data-ng-repeat="flight in vm.data">
+    	<div class="form-group"><span class="logo {{flight.airline_name}}"></span></div>
+    	<div class="form-group"><div>{{flight.airline_name}}</div><div>{{flight.carrier_code}}-{{flight.flight_number}}</div></div>
+    	
+    	<div class="form-group">{{flight.departure_city | uppercase}}</div>
+    	<div class="form-group">{{flight.arrival_city | uppercase}}</div>
+    	<div class="form-group">{{vm.getHours(flight.departure_time)+':'+vm.getMinutes(flight.departure_time)+'m'}}</div>
+    	<div class="form-group">{{vm.getHours(flight.arrival_time)+':'+vm.getMinutes(flight.arrival_time)+'m'}}</div>
+    	<div class="form-group">{{flight.ticket_price}}</div>
+    	<div class="form-group"><button type="submit" class="btn btn-primary">Book</button></div>
+
+    </div>
 
     
 

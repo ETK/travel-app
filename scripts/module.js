@@ -24,8 +24,10 @@
               controllerAs: 'vm'
     		  })
     		  .state('results',{
-      			 url: '/',
-      			 templateUrl: './views/results.html'
+      			 url: '/results',
+      			 templateUrl: './views/results.html',
+             controller: 'ResultsController',
+             controllerAs: 'vm'
     		  })
       };
 })();
