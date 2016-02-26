@@ -29,6 +29,10 @@
 	.formpadding {
 		padding-bottom: 4em;
 	}
+	.listitem {
+		margin-right: 1em;
+		margin-left: 1em;
+	}
 }
 
 /* Extra large devices (large desktops, 75em and up) */
