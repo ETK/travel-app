@@ -29,9 +29,8 @@
 	.formpadding {
 		padding-bottom: 4em;
 	}
-	.listitem {
-		margin-right: 1em;
-		margin-left: 1em;
+	.listitem{
+		margin-top:12px;
 	}
 }
 
@@ -84,7 +83,7 @@ video {
 .Vistara {
 	background-position: -60px 0;
 }
-.SpiceJet {
+.Spicejet{
 	background-position: -120px 0;
 }
 .Go {

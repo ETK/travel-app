@@ -330,6 +330,14 @@
     "ticket_price": 6050
   }
 ];
+
+vm.data.sort(function(a, b) {
+    return parseInt(b.ticket_price) - parseInt(a.ticket_price);
+});
+
+console.log(vm.data);
+
+
     	}
 
 

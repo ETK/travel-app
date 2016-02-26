@@ -6,16 +6,29 @@
   
   <div class="container" style="background:transparent url(./assets/transparency.png) repeat 0 0">
     <p class="lead headingtop">Helping you find the cheapest flight to your favourite destinations.</p>
-    <div class="listbackground row form-inline" data-ng-repeat="flight in vm.data">
+
+    <div class="listbackground row">
+      <div class="col-lg-1"></span></div>
+      <div class="col-lg-2 listitem">Flight</div>
+      
+      <div class="col-lg-2 listitem">From</div>
+      <div class="col-lg-2 listitem">To</div>
+      <div class="col-lg-1 listitem">Departure</div>
+      <div class="col-lg-1 listitem">Arrival</div>
+      <div class="col-lg-1 listitem">Price</div>
+      <div class="col-lg-2 listitem"></div>
+
+    </div>
+    <div class="listbackground row form-inline" data-ng-repeat="flight in vm.data | orderBy:departure_time track by $index">
     	<div class="col-lg-1"><span class="logo {{flight.airline_name}}"></span></div>
-    	<div class="col-lg-2"><div>{{flight.airline_name}}</div><div>{{flight.carrier_code}}-{{flight.flight_number}}</div></div>
+    	<div class="col-lg-2 listitem"><div>{{flight.airline_name}}</div><div>{{flight.carrier_code}}-{{flight.flight_number}}</div></div>
     	
-    	<div class="col-lg-2">{{flight.departure_city | uppercase}}</div>
-    	<div class="col-lg-2">{{flight.arrival_city | uppercase}}</div>
-    	<div class="col-lg-1">{{vm.getHours(flight.departure_time)+':'+vm.getMinutes(flight.departure_time)+'m'}}</div>
-    	<div class="col-lg-1">{{vm.getHours(flight.arrival_time)+':'+vm.getMinutes(flight.arrival_time)+'m'}}</div>
-    	<div class="col-lg-1">{{flight.ticket_price}}</div>
-    	<div class="col-lg-2"><button type="submit" class="btn btn-primary">Book</button></div>
+    	<div class="col-lg-2 listitem">{{flight.departure_city | uppercase}}</div>
+    	<div class="col-lg-2 listitem">{{flight.arrival_city | uppercase}}</div>
+    	<div class="col-lg-1 listitem">{{vm.getHours(flight.departure_time)+':'+vm.getMinutes(flight.departure_time)+'m'}}</div>
+    	<div class="col-lg-1 listitem">{{vm.getHours(flight.arrival_time)+':'+vm.getMinutes(flight.arrival_time)+'m'}}</div>
+    	<div class="col-lg-1 listitem">{{flight.ticket_price | currency:"&#8377;"}}</div>
+    	<div class="col-lg-2 listitem"><button type="submit" class="btn btn-primary">Book</button></div>
 
     </div>
 
