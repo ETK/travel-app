@@ -13,13 +13,13 @@
       
       <div class="col-lg-2 listitem">From</div>
       <div class="col-lg-2 listitem">To</div>
-      <div class="col-lg-1 listitem">Departure</div>
-      <div class="col-lg-1 listitem">Arrival</div>
-      <div class="col-lg-1 listitem">Price</div>
+      <div class="col-lg-1 listitem" data-ng-click="vm.sort('depart')">Departure</div>
+      <div class="col-lg-1 listitem" data-ng-click="vm.sort('arrive')">Arrival</div>
+      <div class="col-lg-1 listitem" data-ng-click="vm.sort('price')">Price</div>
       <div class="col-lg-2 listitem"></div>
 
     </div>
-    <div class="listbackground row form-inline" data-ng-repeat="flight in vm.data | orderBy:departure_time track by $index">
+    <div class="listbackground row form-inline" data-ng-repeat="flight in vm.data">
     	<div class="col-lg-1"><span class="logo {{flight.airline_name}}"></span></div>
     	<div class="col-lg-2 listitem"><div>{{flight.airline_name}}</div><div>{{flight.carrier_code}}-{{flight.flight_number}}</div></div>
     	

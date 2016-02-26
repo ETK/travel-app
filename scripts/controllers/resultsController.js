@@ -6,9 +6,15 @@
 
     	function ResultsController(){
     		var vm = this;
+            var listvalues = {
+                depart: true,
+                arrive: true,
+                price: true
+            }
     		vm.airline_name="Jet Airways";
     		vm.getHours = getHours;
     		vm.getMinutes = getMinutes;
+            vm.sort = sort;
 
     		function getHours(time){
     			var date = new Date(time);
@@ -19,6 +25,63 @@
     			var date = new Date(time);
     			return date.getMinutes();
     		}
+
+            function sort(type){
+                switch(type) {
+                    case "price":
+                            sortPrice(listvalues.price);
+                            listvalues.price = !listvalues.price;
+                        break;
+                    case "depart":
+                            sortDepart(listvalues.depart);
+                            listvalues.depart = !listvalues.depart;
+                        break;
+                    case "arrive":
+                            sortDepart(listvalues.arrive);
+                            listvalues.arrive = !listvalues.arrive;
+                        break;
+                }
+            }
+
+            function sortPrice(value){
+
+                    if(value == true){
+                        vm.data.sort(function(a, b) {
+                            return parseInt(a.ticket_price) - parseInt(b.ticket_price);
+                        });
+                    }
+                    if (value == false){
+                        vm.data.sort(function(a, b) {
+                            return parseInt(b.ticket_price) - parseInt(a.ticket_price) ;
+                        });
+                    }
+                
+            }
+
+            function sortDepart(value){
+                    if(value == true){
+                        vm.data.sort(function(a, b) {
+                            return parseInt(a.departure_time) - parseInt(b.departure_time);
+                        });
+                    }
+                    if (value == false){
+                        vm.data.sort(function(a, b) {
+                            return parseInt(b.departure_time) - parseInt(a.departure_time) ;
+                        });
+                    }
+            }
+            function sortArrive(value){
+                    if(value == true){
+                        vm.data.sort(function(a, b) {
+                            return parseInt(a.arrival_time) - parseInt(b.arrival_time);
+                        });
+                    }
+                    if (value == false){
+                        vm.data.sort(function(a, b) {
+                            return parseInt(b.arrival_time) - parseInt(a.arrival_time) ;
+                        });
+                    }
+            }
 
 
 
@@ -331,11 +394,6 @@
   }
 ];
 
-vm.data.sort(function(a, b) {
-    return parseInt(b.ticket_price) - parseInt(a.ticket_price);
-});
-
-console.log(vm.data);
 
 
     	}
